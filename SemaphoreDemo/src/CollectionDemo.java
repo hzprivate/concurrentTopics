@@ -32,6 +32,6 @@ public class CollectionDemo {
             threadss[i].start();
             threadss[i].join();
         }
-        System.out.println("after remove "+list.size());
+        System.out.println("after  remove "+list.size());
     }
 }
