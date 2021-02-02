@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Description:实现AQS轻量级锁
  * @create 2019-12-21
  */
-public class CAS2 {
+public class AQS {
     Lock lock = new ReentrantLock();
     private int count = 0;
 
@@ -21,12 +21,12 @@ public class CAS2 {
 
     public static void main(String[] args) throws InterruptedException {
         Thread[] t = new Thread[20];
-        CAS2 cas2 = new CAS2();
+        AQS aqs = new AQS();
 
         for (int i = 0; i < 20; i++) {
             t[i] = new Thread(() -> {
-                cas2.addCoount();
-                System.out.println(cas2.count);
+                aqs.addCoount();
+                System.out.println(aqs.count);
             });
             t[i].start();
         }

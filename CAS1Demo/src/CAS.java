@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @Description:实现线程交替性交互  A—>B->A->C->A->D
  * @create 2019-12-21
  */
-public class CAS1 {
+public class CAS {
     private static  volatile int count=0;
     private static AtomicInteger atomicInteger = new AtomicInteger(0);
     public static  void addCoount(){
